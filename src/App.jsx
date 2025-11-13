@@ -1,43 +1,43 @@
 import { useEffect, useState } from "react";
-import Formulario from "./components/Formulario";
+import UserForm from "./components/UserForm";
 import Header from "./components/Header";
-import ListadoPacientes from "./components/ListadoPacientes";
+import PatientList from "./components/PatientList";
 
 function App() {
-  const [pacientes, setPacientes] = useState(
-    JSON.parse(localStorage.getItem("pacientes")) ?? []
+  const [patients, setPatients] = useState(
+    JSON.parse(localStorage.getItem("patients")) ?? []
   );
-  const [paciente, setPaciente] = useState({});
+  const [patient, setPatient] = useState({});
 
   /* useEffect(() => {
-    const obtenerLS = () => {
-      const pacientesLS = JSON.parse(localStorage.getItem("pacientes")) ?? [];
-      setPacientes(pacientesLS);
+    const getLS = () => {
+      const patientsLS = JSON.parse(localStorage.getItem("patients")) ?? [];
+      setPatients(patientsLS);
     };
-    obtenerLS();
+    getLS();
   }, []); */
 
   useEffect(() => {
-    localStorage.setItem("pacientes", JSON.stringify(pacientes));
-  }, [pacientes]);
+    localStorage.setItem("patients", JSON.stringify(patients));
+  }, [patients]);
 
-  const eliminarPaciente = (id) => {
-    setPacientes(pacientes.filter((paciente) => paciente.id !== id));
+  const deletePatient = (id) => {
+    setPatients(patients.filter((patient) => patient.id !== id));
   };
 
   return (
     <div className="container mx-auto mt-20 pb-1">
       <Header />
       <div className="mt-12 md:flex">
-        <Formulario
-          pacientes={pacientes}
-          setPacientes={setPacientes}
-          paciente={paciente}
+        <UserForm
+          patients={patients}
+          setPatients={setPatients}
+          patient={patient}
         />
-        <ListadoPacientes
-          pacientes={pacientes}
-          setPaciente={setPaciente}
-          eliminarPaciente={eliminarPaciente}
+        <PatientList
+          patients={patients}
+          setPatient={setPatient}
+          deletePatient={deletePatient}
         />
       </div>
     </div>
