@@ -1,8 +1,34 @@
-# React + Vite
+# 🐾 VetClinic App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Demo:** [https://nozoinho.github.io/react_vite_veterinary_appointments](https://nozoinho.github.io/react_vite_veterinary_appointments)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📄 Repository Description
+
+A **React + Vite web application** for managing patients and appointments in a **veterinary clinic**.  
+This project serves as a **portfolio demo**, showcasing frontend skills with React components and form handling.  
+No database is used; all data is stored in memory.
+
+Try the **live demo** to interact with the application.
+
+---
+
+## ⚡ Features
+
+- **Add patients** with basic info (name, species, owner, symptoms, etc.)  
+- **Manage patients and appointments** in a visual panel  
+- **Patient tracking**: view registered patients and details  
+- **Form validations**: all fields are required  
+- **Responsive and interactive UI**  
+
+---
+
+## 🛠 Technologies
+
+- **React** – frontend library  
+- **Vite** – build tool  
+- **JavaScript (ES6+)** – logic and data handling  
+- **HTML5 & CSS3** – layout and styles  
+
+---
